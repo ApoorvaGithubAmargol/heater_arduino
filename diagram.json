@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Apoorva gmail Amargol",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 38.4, "left": 91.24, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -66.9,
+      "left": -63,
+      "attrs": { "temperature": "71", "humidity": "26" }
+    },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -5.6, "left": 250.7, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -84,
+      "left": 30.6,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v19.2", "h144" ] ],
+    [ "dht1:SDA", "esp:14", "green", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "rgb1:COM", "esp:GND.2", "black", [ "v0" ] ],
+    [ "rgb1:R", "esp:16", "#8f4814", [ "v0" ] ],
+    [ "rgb1:G", "esp:17", "green", [ "v0" ] ],
+    [ "rgb1:B", "esp:18", "blue", [ "v0" ] ],
+    [ "bz1:1", "esp:GND.1", "green", [ "v0" ] ],
+    [ "bz1:2", "esp:4", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
