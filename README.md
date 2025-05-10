@@ -1,6 +1,7 @@
 # Heater_arduino
 
 This project is Arduino UNO based. Its a basic heater device made using Arduino uno, DHT22 sensor, use of buzzer as a feedback loop and rgb led to show heater response.
+The entire project was simulated in wokwi- https://tinyurl.com/4sxm6hua
 ---------------------------------------------------------------
 Major features of this projects:
 
@@ -32,3 +33,7 @@ This logs both the temperature and the corresponding heater state.
 •	The buzzer alerts with different pitches corresponding to each state.
 •	The stepper motor behavior (stopping when overheating and slowly rotating when heating) is implemented with stepper.stop() in the overheating case and controlling motor speed in the "HEATING" state.
 
+----------------------------------------------
+Libraries installed in wokwi are
+
+![image](https://github.com/user-attachments/assets/83ecdc0b-ff41-4cc9-bf1d-56cb30fd827d)
