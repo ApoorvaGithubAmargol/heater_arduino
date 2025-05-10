@@ -21,17 +21,23 @@ Major features of this projects:
 4. Heater On/Off Based on Thresholds: (HEATING, STABILIZING, TARGET REACHED, OVERHEAT) are correctly linked to temperature thresholds. The heater should turn on/off automatically based on the temperature reading.
 
 5. Logging Temperature and Heater Status Over Serial: Logging the temperature and the current state to the Serial Monitor with the following line:
-cpp
-Copy code
-Serial.print("Temperature: ");
-Serial.print(temp);
-Serial.print(" °C  |  State: ");
+
+       cpp
+        Copy code
+        Serial.print("Temperature: ");
+        Serial.print(temp);
+        Serial.print(" °C  |  State: ");
+
 This logs both the temperature and the corresponding heater state.
 
-6. Additional Elements
+6. Additional Elements:
+
 •	The RGB LED provides a visual cue for each state: Red for heating, Orange for stabilizing, Green for target reached, Blue for overheating, and White in case of an overheat alert.
+
 •	The buzzer alerts with different pitches corresponding to each state.
+
 •	The stepper motor behavior (stopping when overheating and slowly rotating when heating) is implemented with stepper.stop() in the overheating case and controlling motor speed in the "HEATING" state.
+
 
 ----------------------------------------------
 Libraries installed in wokwi are
