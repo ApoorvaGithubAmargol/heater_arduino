@@ -43,3 +43,8 @@ This logs both the temperature and the corresponding heater state.
 Libraries installed in wokwi are
 
 ![image](https://github.com/user-attachments/assets/83ecdc0b-ff41-4cc9-bf1d-56cb30fd827d)
+--------------------------------------------------------------------------------------
+
+The connection diagram:
+
+![image](https://github.com/user-attachments/assets/db608fc0-f75b-4d72-bc0c-b262006845f3)
